@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+
+        </title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <router-view></router-view>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.5/dist/vue.js"></script>
+        <!-- need another CDN for router -->
+        <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+        
+        <script>
+            //define components
+            var User = {
+                template: `<div>
+                                User Component
+                                <router-view></router-view>
+                           </div>`
+            };
+            var UserProfile = {template:'<button>UserProfile Component</button>'};
+            var UserPost = {template:'<button>User Post Component</button>'};
+
+            //define nested routing
+            var routes = [
+                {
+                    path:'/user',
+                    component:User,
+                    children:[
+                        {
+                            path:'posts',
+                            component:UserPost
+                        },
+                        {
+                            path:'profile',
+                            component:UserProfile
+                        },
+                    ]
+                }
+            ];
+            
+            //define vue router
+            var router = new VueRouter({
+                routes
+            });
+
+            //adding router to vue instance
+            var app = new Vue({
+                router
+            }).$mount('#app');
+
+        
+        </script>
+    </body>
+</html>

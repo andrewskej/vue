@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.5/dist/vue.js"></script>
+
+        <div id="app">
+            <child-component></child-component>
+        </div>
+
+        
+        <script>
+            var eventBus = new Vue();
+            Vue.component('child-component', {
+                template: '<div>lower Component area.<button v-on:click="showLog">Show</button></div>',
+                methods: {
+                    showLog:function(){
+                        eventBus.$emit('triggerEventBus',100);
+                    }
+                }
+            });
+
+            var app = new Vue({
+                el:'#app',
+                created:function(){
+                    eventBus.$on('triggerEventBus',function(value){
+                        console.log('event passed - value: ',value)
+                    });
+                }
+            });
+
+        </script>
+
+
+
+    </body>
+</html>
