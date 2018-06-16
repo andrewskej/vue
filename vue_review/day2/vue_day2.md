@@ -8,9 +8,9 @@ vue component comm.
 upper & lower component   upper to lower sends props  / lower to upper sends events  
 
 props   
-	`//define`  	
+	- define: 
 	`Vue.component('child-component',{ props:['props attr name'],});`  
-	`//add attr`        
+	- add attr:         
 	`<child-component v-bind:props attrName="data attr of upper comp"></child-component>`
 
 event & receive
