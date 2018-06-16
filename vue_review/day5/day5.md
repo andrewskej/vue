@@ -26,7 +26,8 @@ major vue Directives to remember:
 - v-bind    <- mapping HTMl basic attributes and vue data attr.
 - v-on      <- for event
 - v-model   <- for 'form'. limited use on certain tags <input><select><textarea> , etc.
-v-model is similar to 2-way data binding of Angular...
+v-model is similar to 2-way data binding of Angular
+  
 
 Directives can pass events and parameters
 
