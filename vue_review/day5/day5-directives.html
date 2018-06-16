@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+
+        <div id="app">
+            <a v-if="flag">if flag, this appears</a>
+            <ul>
+                <li v-for="thing in array">{{thing}}</li>
+            </ul>
+            <p v-show="flag">show and hide</p>
+            <h5 v-bind:id="uid">vue v-bind</h5>
+            <button v-on:click="popupAlert">button for alert popup</button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                    flag:true,
+                    array:['javascript','node','jquery','vue','react'],
+                    uid:10,
+                },
+                methods:{
+                    popupAlert: function(){
+                        return alert("alert popup!!!");
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
+
+
+
+

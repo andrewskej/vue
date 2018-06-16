@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+    <div id="app">
+        <input v-model="message">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                message:'Original message'
+            },
+            watch:{
+                message:function(data){
+                    console.log('message changes: ' + data);
+                }
+            }
+        });
+    </script>
+
+    </body>
+</html>
+
+
+
+
