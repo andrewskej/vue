@@ -26,15 +26,14 @@ major vue Directives to remember:
 - v-bind    <- mapping HTMl basic attributes and vue data attr.
 - v-on      <- for event
 - v-model   <- for 'form'. limited use on certain tags <input><select><textarea> , etc.
-  -> v-model is similar to 2-way data binding of Angular.
-  
-
+  -> v-model is similar to 2-way data binding of Angular.  
+ 
 Directives can pass events and parameters.
-
-computed vs methods:
-computed - auto run upon data change (use caching- meaning it keeps value and return when needed)
-methods - logic runs only when called (no caching)
- -> for repeated complicated calculations, computed might have better performance.
+  
+computed vs methods:  
+computed - auto run upon data change (use caching- meaning it keeps value and return when needed)  
+methods - logic runs only when called (no caching)  
+ -> for repeated complicated calculations, computed might have better performance.  
 
 watch:
 similar to computed, but suitable for more time-consuming async process.
