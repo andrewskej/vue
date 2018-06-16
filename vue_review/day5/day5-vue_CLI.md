@@ -4,17 +4,17 @@ limitation of CDN vue in HTML files... hard to predict how the view will be like
 
 .vue file structure:
 
-<template>
-  //HTML here
-</template>
+    <template>
+    //HTML here
+    </template>
 
-<script>
-  //javascript here
-</script>
+    <script>
+      //javascript here
+    </script>
 
-<style>
-  //CSS here
-</style>
+    <style>
+      //CSS here
+    </style>
 
 ----------------------
 - for single file component system:
