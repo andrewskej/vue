@@ -1,23 +1,25 @@
-[vue Review Day 2]
-vue component comm.
-	local component 1 & local component 2  comp1 can't refer comp2's data directly (unlike JS)
-		-> this is because of component scope.
-			-> it makes all app to have same data flow. easy to follow
+[vue Review Day 2]  
 
-upper & lower component   upper to lower sends props  / lower to upper sends events
+vue component comm.  
+	local component 1 & local component 2  comp1 can't refer comp2's data directly (unlike JS)  
+		-> this is because of component scope.  
+			-> it makes all app to have same data flow. easy to follow  
+
+upper & lower component   upper to lower sends props  / lower to upper sends events  
 
 props   
-//define	Vue.component('child-component',{ props:['props attr name'],});
-//add attr      <child-component v-bind:props attrName="data attr of upper comp"></child-component>
-
+	`//define`  	
+	`Vue.component('child-component',{ props:['props attr name'],});`  
+	`//add attr`        
+	`<child-component v-bind:props attrName="data attr of upper comp"></child-component>`
 
 event & receive
 
-event occur
-this.$emit('eventName');
+- event occur:
+	`this.$emit('eventName');`
 
-event receive
-<child-component v-on:eventName="methodName of upper component"></child-component>
+- event receive:
+    `<child-component v-on:eventName="methodName of upper component"></child-component>`
 
 
 same-level component communications
