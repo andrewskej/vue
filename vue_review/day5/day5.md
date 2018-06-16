@@ -25,14 +25,15 @@ major vue Directives to remember:
 - v-show    <- equivalent to css:display:none. (not deleting, just hiding)
 - v-bind    <- mapping HTMl basic attributes and vue data attr.
 - v-on      <- for event
-- v-model   <- for 'form'. limited use on certain tags <input><select><textarea> , etc.
+- v-model   <- for 'form'. limited use on certain tags <input><select><textarea>
  
-   
+-------------
+
 Directives can pass events and parameters.
   
 computed vs methods:  
-computed - auto run upon data change (use caching- meaning it keeps value and return when needed)  
-methods - logic runs only when called (no caching)  
+- computed - auto run upon data change (use caching- meaning it keeps value and return when needed)  
+- methods - logic runs only when called (no caching)  
  -> for repeated complicated calculations, computed might have better performance.  
 
 watch:
